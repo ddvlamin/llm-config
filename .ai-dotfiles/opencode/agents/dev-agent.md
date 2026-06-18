@@ -5,7 +5,9 @@ model: cortecs/deepseek-v4-flash
 temperature: 0.1
 permission:
   edit: allow
-  bash: allow
+  bash:
+    "*": allow
+    "git commit *": ask
   task:
     "*": deny
     "explore": allow
