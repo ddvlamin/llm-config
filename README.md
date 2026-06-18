@@ -26,6 +26,7 @@ cd llm-config/.ai-dotfiles
 To symlink all configurations to your home directory:
 ```bash
 stow claude vibe codex gemini
+stow -v -t ~/.config/opencode opencode
 ```
 
 To apply only specific ones:
