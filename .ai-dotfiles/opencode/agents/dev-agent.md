@@ -36,7 +36,32 @@ permission:
     "github-issues": allow
     "deep-research": allow
     "caveman": allow
-  "github_*": allow
+  "github_add_issue_comment": allow
+  "github_create_branch": ask
+  "github_create_issue": ask
+  "github_create_or_update_file": ask
+  "github_create_pull_request": ask
+  "github_create_pull_request_review": ask
+  "github_create_repository": ask
+  "github_fork_repository": allow
+  "github_get_file_contents": allow
+  "github_get_issue": allow
+  "github_get_pull_request": allow
+  "github_get_pull_request_comments": allow
+  "github_get_pull_request_files": allow
+  "github_get_pull_request_reviews": allow
+  "github_get_pull_request_status": allow
+  "github_list_commits": allow
+  "github_list_issues": allow
+  "github_list_pull_requests": allow
+  "github_merge_pull_request": allow
+  "github_push_files": ask
+  "github_search_code": allow
+  "github_search_issues": allow
+  "github_search_repositories": allow
+  "github_search_users": allow
+  "github_update_issue": allow
+  "github_update_pull_request_branch": allow
   "context7_*": allow
   "magic_*": allow
   "filesystem_*": allow
