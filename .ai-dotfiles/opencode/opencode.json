@@ -14,6 +14,7 @@
       }
     }
   },
+  "default_agent": "dev",
   "mcp": {
     "browser-use": {
       "type": "remote",
@@ -135,6 +136,36 @@
         "60"
       ],
       "enabled": false
+    }
+  },
+  "tools": {
+    "*": false
+  },
+  "agent": {
+    "dev": {
+      "tools": {
+        "github_*": true,
+        "context7_*": true,
+        "magic_*": true,
+        "filesystem_*": true,
+        "fetch_*": true,
+        "playwright_*": true,
+        "sequential-thinking_*": true,
+        "omega-memory_*": true,
+        "duckduckgo_*": true,
+        "firecrawl_*": true
+      }
+    },
+    "devops": {
+      "tools": {
+        "github_*": true,
+        "firecrawl_*": true,
+        "filesystem_*": true,
+        "fetch_*": true,
+        "playwright_*": true,
+        "sequential-thinking_*": true,
+        "duckduckgo_*": true
+      }
     }
   }
 }
