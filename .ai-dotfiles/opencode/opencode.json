@@ -123,6 +123,18 @@
       "type": "local",
       "command": ["npx", "-y", "@supabase/mcp-server-supabase@latest", "--project-ref=YOUR_PROJECT_REF"],
       "enabled": false
+    },
+    "canva": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.canva.com/mcp",
+        "--auth-timeout",
+        "60"
+      ],
+      "enabled": false
     }
   }
 }

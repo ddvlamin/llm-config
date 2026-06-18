@@ -7,6 +7,7 @@ A centralized repository for managing configurations for multiple AI assistant C
 - **Mistral Vibe CLI**: Global config in `~/.vibe/`
 - **Codex CLI**: Global config in `~/.codex/`
 - **Gemini CLI**: Global config in `~/.gemini/`
+- **OpenCode CLI**: Global config in `~/.config/opencode/`
 
 ## Prerequisites
 - [GNU Stow](https://www.gnu.org/software/stow/) must be installed.
@@ -17,8 +18,8 @@ A centralized repository for managing configurations for multiple AI assistant C
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url> repo
-cd repo/.ai-dotfiles
+git clone https://github.com/ddvlamin/llm-config.git
+cd llm-config/.ai-dotfiles
 ```
 
 ### 2. Apply configurations
