@@ -14,23 +14,22 @@
       }
     }
   },
-  "skills": {
-    "paths": ["/workspace/.skills"]
-  },
   "mcp": {
     "browser-use": {
       "type": "remote",
       "url": "https://api.browser-use.com/mcp",
       "headers": {
         "x-browser-use-api-key": "YOUR_BROWSER_USE_KEY_HERE"
-      }
+      },
+      "enabled": false
     },
     "browserbase": {
       "type": "local",
       "command": ["npx", "-y", "@browserbasehq/mcp-server-browserbase"],
       "env": {
         "BROWSERBASE_API_KEY": "YOUR_BROWSERBASE_KEY_HERE"
-      }
+      },
+      "enabled": false
     },
     "confluence": {
       "type": "local",
@@ -113,7 +112,8 @@
     },
     "playwright": {
       "type": "local",
-      "command": ["npx", "-y", "@playwright/mcp", "--browser", "chrome"]
+      "command": ["npx", "-y", "@playwright/mcp", "--browser", "chrome"],
+      "enabled": false
     },
     "sequential-thinking": {
       "type": "local",

@@ -7,34 +7,8 @@
     "cortecs"
   ],
   "model": "google/gemini-3.5-flash",
+  "default_agent": "dev",
   "provider": {
-    "anthropic": {
-      "models": {
-        "claude-haiku-4-5": {
-          "id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
-          "name": "Claude Haiku 4 5"
-        },
-        "claude-opus-4-6": {
-          "id": "eu.anthropic.claude-opus-4-6-v1",
-          "name": "Claude Opus 4 6"
-        },
-        "claude-sonnet-4-6": {
-          "id": "eu.anthropic.claude-sonnet-4-6",
-          "name": "Claude Sonnet 4 6"
-        }
-      },
-      "options": {
-        "baseURL": "https://llm.searchingpi.com/aws/v1"
-      },
-      "whitelist": [
-        "claude-sonnet-4-6",
-        "eu.anthropic.claude-sonnet-4-6",
-        "claude-opus-4-6",
-        "eu.anthropic.claude-opus-4-6-v1",
-        "claude-haiku-4-5",
-        "eu.anthropic.claude-haiku-4-5-20251001-v1:0"
-      ]
-    },
     "cortecs": {
       "models": {
         "deepseek-v4-flash": {
@@ -94,7 +68,7 @@
         "devstral-2512",
         "mistral-small-2603"
       ]
-    },  
+    },
     "google": {
       "models": {
         "gemini-3.1-flash-lite": {
@@ -113,24 +87,7 @@
         "gemini-3.1-flash-lite",
         "gemini-3.5-flash"
       ]
-    },
-    "openai": {
-      "models": {
-        "gpt-5.4": {
-          "id": "gpt-5.4",
-          "name": "Gpt 5.4"
-        }
-      },
-      "options": {
-        "baseURL": "https://llm.searchingpi.com/v1"
-      },
-      "whitelist": [
-        "gpt-5.4"
-      ]
     }
-  },
-  "skills": {
-    "paths": ["/workspace/.skills"]
   },
   "mcp": {
     "browser-use": {
@@ -138,18 +95,28 @@
       "url": "https://api.browser-use.com/mcp",
       "headers": {
         "x-browser-use-api-key": "YOUR_BROWSER_USE_KEY_HERE"
-      }
+      },
+      "enabled": false
     },
     "browserbase": {
       "type": "local",
-      "command": ["npx", "-y", "@browserbasehq/mcp-server-browserbase"],
+      "command": [
+        "npx",
+        "-y",
+        "@browserbasehq/mcp-server-browserbase"
+      ],
       "env": {
         "BROWSERBASE_API_KEY": "YOUR_BROWSERBASE_KEY_HERE"
-      }
+      },
+      "enabled": false
     },
     "confluence": {
       "type": "local",
-      "command": ["npx", "-y", "confluence-mcp-server"],
+      "command": [
+        "npx",
+        "-y",
+        "confluence-mcp-server"
+      ],
       "env": {
         "CONFLUENCE_API_TOKEN": "YOUR_CONFLUENCE_TOKEN_HERE",
         "CONFLUENCE_BASE_URL": "YOUR_CONFLUENCE_URL_HERE",
@@ -159,15 +126,27 @@
     },
     "context7": {
       "type": "local",
-      "command": ["npx", "-y", "@upstash/context7-mcp@latest"]
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
     },
     "duckduckgo": {
       "type": "local",
-      "command": ["web-search-mcp"]
+      "command": [
+        "web-search-mcp"
+      ]
     },
     "evalview": {
       "type": "local",
-      "command": ["python3", "-m", "evalview", "mcp", "serve"],
+      "command": [
+        "python3",
+        "-m",
+        "evalview",
+        "mcp",
+        "serve"
+      ],
       "env": {
         "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY_HERE"
       },
@@ -175,7 +154,11 @@
     },
     "exa-web-search": {
       "type": "local",
-      "command": ["npx", "-y", "exa-mcp-server"],
+      "command": [
+        "npx",
+        "-y",
+        "exa-mcp-server"
+      ],
       "env": {
         "EXA_API_KEY": "YOUR_EXA_API_KEY_HERE"
       },
@@ -183,29 +166,49 @@
     },
     "fetch": {
       "type": "local",
-      "command": ["uvx", "mcp-server-fetch", "--ignore-robots-txt"]
+      "command": [
+        "uvx",
+        "mcp-server-fetch",
+        "--ignore-robots-txt"
+      ]
     },
     "filesystem": {
       "type": "local",
-      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "/workspace/"]
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/workspace/"
+      ]
     },
     "firecrawl": {
       "type": "local",
-      "command": ["npx", "-y", "firecrawl-mcp"],
+      "command": [
+        "npx",
+        "-y",
+        "firecrawl-mcp"
+      ],
       "env": {
         "FIRECRAWL_API_KEY": "${FIRECRAWL_KEY}"
       }
     },
     "github": {
       "type": "local",
-      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
       }
     },
     "jira": {
       "type": "local",
-      "command": ["uvx", "mcp-atlassian==0.21.0"],
+      "command": [
+        "uvx",
+        "mcp-atlassian==0.21.0"
+      ],
       "env": {
         "JIRA_API_TOKEN": "YOUR_JIRA_API_TOKEN_HERE",
         "JIRA_EMAIL": "YOUR_JIRA_EMAIL_HERE",
@@ -215,28 +218,55 @@
     },
     "magic": {
       "type": "local",
-      "command": ["npx", "-y", "@magicuidesign/mcp@latest"]
+      "command": [
+        "npx",
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ]
     },
     "memory": {
       "type": "local",
-      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
       "enabled": false
     },
     "omega-memory": {
       "type": "local",
-      "command": ["/workspace/.venv/bin/omega", "serve"]
+      "command": [
+        "/workspace/.venv/bin/omega",
+        "serve"
+      ]
     },
     "playwright": {
       "type": "local",
-      "command": ["npx", "-y", "@playwright/mcp", "--browser", "chrome"]
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp",
+        "--browser",
+        "chrome"
+      ],
+      "enabled": false
     },
     "sequential-thinking": {
       "type": "local",
-      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
     },
     "supabase": {
       "type": "local",
-      "command": ["npx", "-y", "@supabase/mcp-server-supabase@latest", "--project-ref=YOUR_PROJECT_REF"],
+      "command": [
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=YOUR_PROJECT_REF"
+      ],
       "enabled": false
     },
     "canva": {
